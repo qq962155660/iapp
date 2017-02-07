@@ -7,8 +7,12 @@
     <string name="hint_username">请输入用户名</string>
     <string name="hint_password">请输入密码</string>
 
+    <string name="tab_menu_alert">提醒</string>
+    <string name="tab_menu_profile">信息</string>
+    <string name="tab_menu_pay">我的</string>
+    <string name="tab_menu_setting">设置</string>
     
     <drawable name="clr_normal">#04A3FF</drawable>
-	 <drawable name="clr_pressed">#C0C0C0</drawable>
+	<drawable name="clr_pressed">#C0C0C0</drawable>
 
 </resources>
