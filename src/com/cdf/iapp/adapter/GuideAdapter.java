@@ -8,12 +8,12 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 
-public class ViewPagerAdapter extends PagerAdapter{
+public class GuideAdapter extends PagerAdapter{
 	
 	private List<View> views;
 	private Context context;
 
-	public ViewPagerAdapter(List<View> views, Context context) {
+	public GuideAdapter(List<View> views, Context context) {
 		this.views = views;
 		this.context = context;
 	}

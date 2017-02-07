@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
 import java.util.List;
-import com.cdf.iapp.adapter.ViewPagerAdapter;
+import com.cdf.iapp.adapter.GuideAdapter;
 import com.cdf.iapp.sys.SysConfig;
 
 import android.app.Activity;
@@ -19,7 +19,7 @@ public class GuideActivity extends Activity {
 
 
 	private ViewPager vp;
-	private ViewPagerAdapter vpAdapter;
+	private GuideAdapter vpAdapter;
 	private List<View> views;
 	private Button btn;
 	
@@ -39,7 +39,7 @@ public class GuideActivity extends Activity {
 		views.add(inflater.inflate(R.drawable.guide_two, null));
 		views.add(inflater.inflate(R.drawable.guide_three, null));
 		
-		vpAdapter = new ViewPagerAdapter(views, this);
+		vpAdapter = new GuideAdapter(views, this);
 		vp = (ViewPager) findViewById(R.id.guide_viewpager);
 		vp.setAdapter(vpAdapter);
 		btn = (Button) views.get(2).findViewById(R.id.start_btn11);
