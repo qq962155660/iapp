@@ -1,6 +1,8 @@
 package com.cdf.iapp;
 
 import android.os.Bundle;
+import android.view.MotionEvent;
+
 import com.cdf.iapp.fragment.MainFrag1;
 import com.cdf.iapp.fragment.MainFrag2;
 import com.cdf.iapp.fragment.MainFrag3;
@@ -14,7 +16,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 
 public class MainActivity extends Activity implements OnCheckedChangeListener {
 
-	private RadioButton vRbchannel;
+	private RadioButton vRbBlog;
 	private RadioGroup vRgTabBar;
 
 	private MainFrag1 mf1;
@@ -38,28 +40,29 @@ public class MainActivity extends Activity implements OnCheckedChangeListener {
 		vRgTabBar = (RadioGroup) findViewById(R.id.rg_tab_bar);
 		vRgTabBar.setOnCheckedChangeListener(this);
 		// 获取第一个单选按钮，并设置其为选中状态
-		vRbchannel = (RadioButton) findViewById(R.id.rb_channel);
-		vRbchannel.setChecked(true);
+		vRbBlog = (RadioButton) findViewById(R.id.rb_blog);
+		vRbBlog.setChecked(true);
 	}
 	
+
 
 	@Override
 	public void onCheckedChanged(RadioGroup group, int checkedId) {
 		fTransaction = fManager.beginTransaction();
 		switch (checkedId) {
-		case R.id.rb_channel:
+		case R.id.rb_blog:
 			 mf1 = new MainFrag1();  
 			 fTransaction.replace(R.id.fl_content, mf1);  
 			break;
-		case R.id.rb_message:
+		case R.id.rb_findon:
 			mf2 = new MainFrag2();
 			fTransaction.replace(R.id.fl_content, mf2);
 			break;
-		case R.id.rb_better:
+		case R.id.rb_friend:
 			mf3 = new MainFrag3();
 			fTransaction.replace(R.id.fl_content, mf3);
 			break;
-		case R.id.rb_setting:
+		case R.id.rb_myself:
 			mf4 = new MainFrag4();
 			fTransaction.replace(R.id.fl_content, mf4);
 			break;
