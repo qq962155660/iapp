@@ -10,6 +10,7 @@
 	<color name="text_gray">#8D7A71</color>
    <!--  <color name="text_white">#FFFFFF</color> -->
     <color name="text_yellow">#FFC800</color>
+    <color name="text_green">#1afa29</color>
     <color name="text_topbar">#694E42</color>
     <color name="div_white">#E5E5E5</color>
     
@@ -27,7 +28,7 @@
     <color name="background_gray">#F4F3F3</color>
     <color name="background_gray_pale">#F5F5F5</color>
     
-    
+    <color name="banhuifgx">#9BA3A8</color>
     
     <color name="background_main">#F3F3F3</color>
     
@@ -57,5 +58,8 @@
     <color name="wxnavpage">#FFE1E8EB</color>
  <!-- 深蓝 -->
     <color name="blue_dleep">#346286</color>
+    
+    <color name="normal" >#eae8e8</color>
+    <color name="press" >#bcb2b2</color>
 
 </resources>

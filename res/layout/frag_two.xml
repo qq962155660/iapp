@@ -1,12 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>  
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
     android:layout_width="match_parent"  
-    android:layout_height="match_parent"  
-    android:orientation="vertical" >  
-    <TextView  
-        android:id="@+id/textView1"  
-        android:layout_width="wrap_content"  
-        android:layout_height="wrap_content"  
-        android:text="这时第二个界面"  
-        android:textSize="30sp" />  
-</LinearLayout>  
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray" >  
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+   
+	   <RelativeLayout  
+	        android:id="@+id/fg2_ry1"  
+	        android:layout_width="match_parent"  
+	        android:layout_height="50dp"  
+	        android:layout_alignParentLeft="true"  
+	        android:layout_below="@+id/relativeLayout1"  
+	        android:layout_margin="10dp"
+	        android:padding="10dp"    
+	        android:background="@drawable/selector_single"  
+	        android:clickable="true" >  
+	  
+	        <ImageView  
+	            android:id="@+id/imageView1"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_alignParentLeft="true"  
+	            android:layout_marginLeft="20dp"
+	            android:layout_centerVertical="true"  
+	            android:src="@drawable/moments" />  
+	  
+	        <TextView  
+	            android:id="@+id/text_pyq"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_centerVertical="true"  
+	            android:layout_marginLeft="40dp"  
+	            android:layout_toRightOf="@+id/imageView1"  
+	            android:text="朋友圈"  
+	            android:textColor="#000" 
+	            android:textSize="18sp"/>  
+	  
+	        <ImageView  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_alignParentRight="true"  
+	            android:layout_centerVertical="true"  
+	            android:layout_marginRight="10dp"  
+	            android:src="@drawable/more" />  
+	    </RelativeLayout>
+	    
+	   <LinearLayout 
+	       android:layout_width="match_parent"
+	       android:layout_height="120dp"
+	       android:layout_margin="10dp"
+	       android:padding="10dp"
+	       android:orientation="vertical"
+	       android:background="@color/bg_white"  
+	       android:clickable="true">    
+	      
+	       <RelativeLayout  
+	            android:id="@+id/fg2_ry2"
+	            android:layout_width="wrap_content"  
+	            android:layout_height="50dp" 
+	            android:background="@drawable/selector_single"  
+	            android:clickable="true">  
+	  
+		        <ImageView  
+		            android:id="@+id/imageView2"  
+		            android:layout_width="wrap_content"  
+		            android:layout_height="wrap_content"  
+		            android:layout_alignParentLeft="true"  
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"  
+		            android:src="@drawable/scan" />  
+		  
+		        <TextView  
+		            android:layout_width="wrap_content"  
+		            android:layout_height="wrap_content"  
+		            android:layout_centerVertical="true"  
+		            android:layout_marginLeft="40dp"  
+		            android:layout_toRightOf="@+id/imageView2"  
+		            android:text="扫一扫"  
+		            android:textColor="#000" 
+		            android:textSize="18sp"/>  
+		  
+		        <ImageView  
+		            android:layout_width="wrap_content"  
+		            android:layout_height="wrap_content"  
+		            android:layout_alignParentRight="true"  
+		            android:layout_centerVertical="true"  
+		            android:layout_marginRight="10dp"  
+		            android:src="@drawable/more" />  
+	            
+	       </RelativeLayout>  
+	       
+	       <View
+		    android:layout_width="match_parent"
+		    android:layout_height="0.1dp"
+		    android:background="@color/banhuifgx" />
+	       
+	       <RelativeLayout  
+	           android:id="@+id/fg2_ry3"
+	            android:layout_width="wrap_content"  
+	            android:layout_height="50dp" 
+	            android:background="@drawable/selector_single"  
+	            android:clickable="true">  
+	  
+		        <ImageView  
+		            android:id="@+id/imageView3"  
+		            android:layout_width="wrap_content"  
+		            android:layout_height="wrap_content"  
+		            android:layout_alignParentLeft="true"  
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"  
+		            android:src="@drawable/vedio" />  
+		  
+		        <TextView  
+		            android:layout_width="wrap_content"  
+		            android:layout_height="wrap_content"  
+		            android:layout_centerVertical="true"  
+		            android:layout_marginLeft="40dp"  
+		            android:layout_toRightOf="@+id/imageView3"  
+		            android:text="视频区"  
+		            android:textColor="#000" 
+		            android:textSize="18sp"/>  
+		  
+		        <ImageView  
+		            android:layout_width="wrap_content"  
+		            android:layout_height="wrap_content"  
+		            android:layout_alignParentRight="true"  
+		            android:layout_centerVertical="true"  
+		            android:layout_marginRight="10dp"  
+		            android:src="@drawable/more" />  
+	            
+	       </RelativeLayout>  
+	       
+	   </LinearLayout>
+	   
+    
+   </LinearLayout>
+</RelativeLayout>  

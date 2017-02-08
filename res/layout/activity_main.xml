@@ -9,69 +9,53 @@
     <RelativeLayout
         android:id="@+id/ly_top_bar"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="0dp"
         android:background="@color/bg_topbar">
-
-        <TextView
-            android:id="@+id/txt_topbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="信息"
-            android:textColor="@color/text_topbar"
-            android:textSize="18sp" />
-
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2px"
-            android:layout_alignParentBottom="true"
-            android:background="@color/div_white" />
-
+		
     </RelativeLayout>
-
 
     <RadioGroup
         android:id="@+id/rg_tab_bar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:background="@color/bg_white"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <RadioButton
-            android:id="@+id/rb_channel"
+            android:id="@+id/rb_blog"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/tab_menu_channel"
-            android:text="@string/tab_menu_alert" />
+            android:drawableTop="@drawable/tab_menu_blog"
+            android:text="@string/tab_menu_blog" />
 
         <RadioButton
-            android:id="@+id/rb_message"
+            android:id="@+id/rb_findon"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/tab_menu_message"
-            android:text="@string/tab_menu_profile" />
+            android:drawableTop="@drawable/tab_menu_findon"
+            android:text="@string/tab_menu_findon" />
 
         <RadioButton
-            android:id="@+id/rb_better"
+            android:id="@+id/rb_friend"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/tab_menu_better"
-            android:text="@string/tab_menu_pay" />
+            android:drawableTop="@drawable/tab_menu_friend"
+            android:text="@string/tab_menu_friend" />
 
         <RadioButton
-            android:id="@+id/rb_setting"
+            android:id="@+id/rb_myself"
             style="@style/tab_menu_item"
-            android:drawableTop="@drawable/tab_menu_setting"
-            android:text="@string/tab_menu_setting"/>
+            android:drawableTop="@drawable/tab_menu_myself"
+            android:text="@string/tab_menu_myself"/>
 
     </RadioGroup>
 
     <View
         android:id="@+id/div_tab_bar"
         android:layout_width="match_parent"
-        android:layout_height="2px"
+        android:layout_height="1px"
         android:layout_above="@id/rg_tab_bar"
+        android:layout_marginBottom="5px"
         android:background="@color/div_white" />
+    
 
     <FrameLayout
         android:id="@+id/fl_content"
