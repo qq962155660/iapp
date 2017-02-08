@@ -62,4 +62,10 @@
     <color name="normal" >#eae8e8</color>
     <color name="press" >#bcb2b2</color>
 
+      <!-- 灰色背景 -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="common_botton_bar_blue">#2ea7e0</color>
+    <color name="common_top_bar_blue">#22292c</color>
 </resources>
