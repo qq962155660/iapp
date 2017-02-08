@@ -3,7 +3,8 @@
     package="com.cdf.iapp"
     android:versionCode="1"
     android:versionName="1.0" >
-
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>  
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission> 
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="21" />
@@ -34,6 +35,18 @@
         </activity>
         <activity
             android:name=".LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name=".MomentsActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name=".CommentActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name=".PhotoCommentActivity"
             android:label="@string/app_name" >
         </activity>
     </application>
