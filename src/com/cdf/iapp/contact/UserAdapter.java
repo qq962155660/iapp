@@ -1,6 +1,8 @@
 package com.cdf.iapp.contact;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +71,9 @@ public class UserAdapter extends BaseAdapter{
             @Override
             public void onClick(View v) {
                 Toast.makeText(mContext,users.get(position).getName(),Toast.LENGTH_SHORT).show();
+//                Intent intent=new Intent(mContext, OtherActivity.class);
+//                intent.putExtra("userId", users.get(position).toString());
+//				mContext.startActivity(intent);
             }
         });
         //当前的item的title与上一个item的title不同的时候回显示title(A,B,C......)
