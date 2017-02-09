@@ -31,7 +31,7 @@ import android.widget.TextView;
 
 
 
-public class FriensGroupAdapter extends BaseAdapter{
+public class MomentsGroupAdapter extends BaseAdapter{
 
 	private Context mContext;
 	private LayoutInflater mInflater;
@@ -40,7 +40,7 @@ public class FriensGroupAdapter extends BaseAdapter{
 	private List<PraiseBean> mpraiselist=new ArrayList<PraiseBean>();
 	private List<String> mPraisesList=new ArrayList<String>();
 	public static List<FriendsGroupBean> mlist1=new ArrayList<FriendsGroupBean>();
-	public FriensGroupAdapter(Context mContext, List<FriendsGroupBean> mlist) {
+	public MomentsGroupAdapter(Context mContext, List<FriendsGroupBean> mlist) {
 		super();
 		this.mContext = mContext;
 		this.mInflater = LayoutInflater.from(mContext);
@@ -70,7 +70,7 @@ public class FriensGroupAdapter extends BaseAdapter{
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		ViewHolder holder=null;
 		if(convertView==null){
-			convertView=mInflater.inflate(R.layout.item_friends_group, null);
+			convertView=mInflater.inflate(R.layout.item_moment_group, null);
 			holder=new ViewHolder();
 			holder.tv_name=(TextView) convertView.findViewById(R.id.tv_name);
 			holder.tv_content=(TextView) convertView.findViewById(R.id.tv_content);

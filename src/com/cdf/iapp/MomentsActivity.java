@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import com.cdf.iapp.adapter.FriensGroupAdapter;
+import com.cdf.iapp.adapter.MomentsGroupAdapter;
 import com.cdf.iapp.bean.CommentBean;
 import com.cdf.iapp.bean.FriendsGroupBean;
 import com.cdf.iapp.bean.PraiseBean;
@@ -76,7 +76,7 @@ public class MomentsActivity extends Activity implements OnClickListener {
 				super.handleMessage(msg);
 				switch (msg.what) {
 				case 0:
-					FriensGroupAdapter mAdapter=new FriensGroupAdapter(MomentsActivity.this, mlist);
+					MomentsGroupAdapter mAdapter=new MomentsGroupAdapter(MomentsActivity.this, mlist);
 					lv_result.setAdapter(mAdapter);
 					setListViewHeightBasedOnChildren(lv_result, 0);
 					break;
@@ -147,7 +147,7 @@ public class MomentsActivity extends Activity implements OnClickListener {
 		mlist.add(bean);
 	}
 	private void setData() {
-		FriensGroupAdapter mAdapter=new FriensGroupAdapter(MomentsActivity.this, mlist);
+		MomentsGroupAdapter mAdapter=new MomentsGroupAdapter(MomentsActivity.this, mlist);
 		lv_result.setAdapter(mAdapter);
 		setListViewHeightBasedOnChildren(lv_result, 0);
 	}

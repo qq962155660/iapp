@@ -57,7 +57,7 @@ public class UserAdapter extends BaseAdapter{
         ViewHolder viewHolder = null;
         if (convertView == null) {
             viewHolder = new ViewHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.friend_item, null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_friend_group, null);
             viewHolder.tvTitle = (TextView) convertView.findViewById(R.id.title);
             viewHolder.tvName = (TextView) convertView.findViewById(R.id.name);
             viewHolder.tvItem = (LinearLayout) convertView.findViewById(R.id.item);

@@ -28,7 +28,7 @@ public class MainFrag3 extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.frag_three, null);
-		mListview = (ListView) v.findViewById(R.id.listview);
+		mListview = (ListView) v.findViewById(R.id.fg3_listview);
 		sideBarView = (SideBarView) v.findViewById(R.id.sidebarview);
 		mTip = (TextView) v.findViewById(R.id.tip);
 		initData();
