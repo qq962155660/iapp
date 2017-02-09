@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_blog_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:padding="3dp" 
+   
+    >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/navpage"
+        android:scrollbarThumbVertical="@drawable/scrollbar_handle_vertical" >
+
+        <LinearLayout
+            android:id="@+id/item_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@android:color/white"
+            android:minHeight="80dp"
+             android:clickable="true"
+            android:paddingTop="12dp" >
+			
+             <TextView
+                android:id="@+id/item_group_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#2f649a"
+                android:textSize="16sp" 
+                android:text="标题..."/>
+            
+            <TextView
+                android:id="@+id/item_group_Introduction_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp" 
+                android:textColor="#666"
+                android:text="简介"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:id="@+id/item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/item_group_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#815F3D"
+                        android:textSize="15sp" 
+                        android:text="2011.1.1"/>
+                </LinearLayout>
+				 
+				<LinearLayout
+                    android:id="@+id/item_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/item_time"
+                     android:paddingLeft="4dp">
+
+                    <TextView
+                        android:id="@+id/item_group_author_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#815F3D"
+                        android:textSize="15sp" 
+                        android:text="顶峰"/>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/item_read"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/item_comment" 
+                    android:paddingRight="4dp">
+
+                    <TextView
+                        android:id="@+id/item_group_read_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#815F3D"
+                        android:textSize="15sp" 
+                        android:text="阅读(111)"/>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/item_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="0dp"
+                    android:layout_alignParentRight="true" >
+
+                    <TextView
+                        android:id="@+id/item_group_comment_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#815F3D"
+                        android:textSize="15sp" 
+                        android:text="评论(1)"/>
+                </LinearLayout>
+
+              
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

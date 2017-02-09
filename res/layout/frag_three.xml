@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none"
-        android:id="@+id/listview"/>
+        android:id="@+id/fg3_listview"/>
 
     <com.cdf.iapp.contact.SideBarView
         android:id="@+id/sidebarview"
