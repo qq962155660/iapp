@@ -1,14 +1,18 @@
 package com.cdf.iapp;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 
-import com.cdf.iapp.sys.SysConfig;
-
+import java.io.IOException;
+import org.json.JSONException;
+import org.json.JSONObject;
+import com.cdf.iapp.sys.Global;
+import com.cdf.iapp.util.HttpUtil;
+import com.cdf.iapp.util.SharedHelper;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -24,13 +28,33 @@ public class LoginActivity extends Activity implements OnClickListener{
 	private EditText vEtPwd;
 	private TextView vTvForgetPwd;
 	private TextView vTvRegister;
+	public static Handler mHandler;
 	
+	@SuppressLint("HandlerLeak")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_login);
 		initView();
+		mHandler = new Handler(){
+			@Override
+			public void handleMessage(Message msg) {
+				switch (msg.what) {
+				case 0:
+					Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+					Intent i = new Intent(LoginActivity.this, MainActivity.class);
+					startActivity(i);
+					finish();
+					break;
+				case 201:
+					Toast.makeText(LoginActivity.this, "请检验用户名密码", Toast.LENGTH_SHORT).show();
+					break;
+				default:
+					break;
+				}
+			}
+		};
 	}
 
 	private void initView() {
@@ -49,15 +73,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 			if(v1.equals("") || v2.equals("")){
 				Toast.makeText(this, "账户密码不能为空", Toast.LENGTH_SHORT).show();
 			}else{
-				//do login request
-				SysConfig.token = "token123";
-				SharedPreferences pePreferences = getSharedPreferences("cdf", MODE_PRIVATE);
-				Editor editor = pePreferences.edit();
-				editor.putString("token", SysConfig.token);
-				editor.commit();
-				Intent i = new Intent(LoginActivity.this, MainActivity.class);
-				startActivity(i);
-				finish();
+				doLoin(v1,v2);
 			}
 			break;
 
@@ -65,6 +81,29 @@ public class LoginActivity extends Activity implements OnClickListener{
 			break;
 		}
 		
+	}
+
+	private void doLoin(final String account, final String password) {
+		new Thread(){
+			
+			@Override
+			public void run() {
+				try {
+					JSONObject json = HttpUtil.doGet(Global.URL_LOGIN + "?account=" + account + "&password=" + password);;
+					if(json.getInt("code") == 0){
+						String token = json.getString("data");
+						SharedHelper shp = new SharedHelper(getApplicationContext());
+						shp.saveString("token", token);
+						mHandler.sendEmptyMessage(0);
+					}else{
+						mHandler.sendEmptyMessage(201);
+					}
+				} catch (IOException | JSONException e) {
+					e.printStackTrace();
+				}
+			}
+		}.start();;
+	
 	}
 
 	

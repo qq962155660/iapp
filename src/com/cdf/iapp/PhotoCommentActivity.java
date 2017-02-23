@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
-import com.cdf.iapp.bean.FriendsGroupBean;
+import com.cdf.iapp.bean.DynamicBean;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -57,11 +57,11 @@ public class PhotoCommentActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.tv_add:
 			if(!et_comment.getText().toString().trim().isEmpty()){
-				FriendsGroupBean bean=new FriendsGroupBean();
-				bean.setName("微笑");
+				DynamicBean bean=new DynamicBean();
+				bean.setUsername("微笑");
 				bean.setContent(et_comment.getText().toString().trim());
-				bean.setPhotoUrl(MomentsActivity.imageName);
-				bean.setTime(getStringDate());
+				bean.setPicture(MomentsActivity.imageName);
+				bean.setCreateTime(getStringDate());
 				MomentsActivity.mlist.add(bean);
 				MomentsActivity.mHandler.sendEmptyMessage(0);
 				finish();

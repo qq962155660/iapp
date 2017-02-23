@@ -5,10 +5,12 @@ import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
 import java.util.List;
 import com.cdf.iapp.adapter.GuideAdapter;
-import com.cdf.iapp.sys.SysConfig;
+import com.cdf.iapp.util.SharedHelper;
+import com.cdf.iapp.util.StringUtils;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -47,7 +49,11 @@ public class GuideActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				if(SysConfig.token == null || SysConfig.token.equals("")){
+//				SharedPreferences pePreferences = getSharedPreferences("cdf", MODE_PRIVATE);
+//				String token = pePreferences.getString("token", null);
+				SharedHelper help = new SharedHelper(getApplicationContext());
+				String token = help.getString("token");
+				if(StringUtils.isBlank(token)){
 					Intent i = new Intent(GuideActivity.this, LoginActivity.class);
 					startActivity(i);
 					finish();

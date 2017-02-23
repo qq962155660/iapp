@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.cdf.iapp.R;
-import com.cdf.iapp.bean.FriendsGroupBean;
+import com.cdf.iapp.bean.DynamicBean;
 import com.cdf.iapp.bean.PraiseBean;
 import com.cdf.iapp.util.StringUtils;
 
@@ -35,12 +35,12 @@ public class MomentsGroupAdapter extends BaseAdapter{
 
 	private Context mContext;
 	private LayoutInflater mInflater;
-	private List<FriendsGroupBean> mlist=new ArrayList<FriendsGroupBean>();
+	private List<DynamicBean> mlist=new ArrayList<DynamicBean>();
 	private  SharedPreferences prefs;
 	private List<PraiseBean> mpraiselist=new ArrayList<PraiseBean>();
 	private List<String> mPraisesList=new ArrayList<String>();
-	public static List<FriendsGroupBean> mlist1=new ArrayList<FriendsGroupBean>();
-	public MomentsGroupAdapter(Context mContext, List<FriendsGroupBean> mlist) {
+	public static List<DynamicBean> mlist1=new ArrayList<DynamicBean>();
+	public MomentsGroupAdapter(Context mContext, List<DynamicBean> mlist) {
 		super();
 		this.mContext = mContext;
 		this.mInflater = LayoutInflater.from(mContext);
@@ -93,9 +93,9 @@ public class MomentsGroupAdapter extends BaseAdapter{
 		}else{
 			holder=(ViewHolder) convertView.getTag();
 		}
-		holder.tv_name.setText(mlist.get(position).getName());
+		holder.tv_name.setText(mlist.get(position).getUsername());
 		holder.tv_content.setText(mlist.get(position).getContent());
-		holder.tv_time.setText(mlist.get(position).getTime().subSequence(0, 10));
+		holder.tv_time.setText(mlist.get(position).getCreateTime().subSequence(0, 10));
 		if(mlist.get(position).getPraises().size()>0){
 			mPraisesList.clear();
 			for(int i=0;i<mlist.get(position).getPraises().size();i++){
@@ -118,8 +118,8 @@ public class MomentsGroupAdapter extends BaseAdapter{
 			holder.view.setVisibility(View.GONE);
 
 		}
-		if(mlist.get(position).getPhotoUrl()!=null){
-			Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/"+mlist.get(position).getPhotoUrl());
+		if(mlist.get(position).getPicture()!=null){
+			Bitmap bm = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/"+mlist.get(position).getPicture());
 			holder.iv_photo.setImageBitmap(bm);
 		}else{
 			holder.iv_photo.setImageDrawable(mContext.getResources().getDrawable(R.drawable.touxiang));

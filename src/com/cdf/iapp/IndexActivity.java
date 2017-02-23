@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
 
-import com.cdf.iapp.sys.SysConfig;
-
+import com.cdf.iapp.util.SharedHelper;
+import com.cdf.iapp.util.StringUtils;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -50,11 +50,14 @@ public class IndexActivity extends Activity {
 	
 	
 	private void init(){
-		SharedPreferences pePreferences = getSharedPreferences("cdf", MODE_PRIVATE);
-		isFirstIn = pePreferences.getBoolean("isFirstIn", true);
-		SysConfig.token = pePreferences.getString("token", null);
+//		SharedPreferences pePreferences = getSharedPreferences("cdf", MODE_PRIVATE);
+//		isFirstIn = pePreferences.getBoolean("isFirstIn", true);
+//		String token = pePreferences.getString("token", null);
+		SharedHelper sph = new SharedHelper(getApplicationContext());
+		isFirstIn = sph.getBoolean("isFirstIn");
+		String token = sph.getString("token");
 		if(!isFirstIn){
-			if(SysConfig.token == null){
+			if(StringUtils.isBlank(token)){
 				mHandler.sendEmptyMessageAtTime(GO_LOGIN, TIME);
 			}else{
 				mHandler.sendEmptyMessageDelayed(GO_HOME, TIME);
@@ -62,9 +65,10 @@ public class IndexActivity extends Activity {
 			
 		}else{
 			mHandler.sendEmptyMessageDelayed(GO_GUIDE, TIME);
-			Editor editor = pePreferences.edit();
-			editor.putBoolean("isFirstIn", false);
-			editor.commit();
+//			Editor editor = pePreferences.edit();
+//			editor.putBoolean("isFirstIn", false);
+//			editor.commit();
+			sph.saveBoolean("isFirstIn", false);
 		}
 	}
 

@@ -3,7 +3,7 @@ package com.cdf.iapp;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.cdf.iapp.bean.FriendsGroupBean;
+import com.cdf.iapp.bean.DynamicBean;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -45,11 +45,11 @@ public class CommentActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.tv_add:
 			if(!et_comment.getText().toString().trim().isEmpty()){
-				FriendsGroupBean bean=new FriendsGroupBean();
-				bean.setName("微笑");
+				DynamicBean bean=new DynamicBean();
+				bean.setUsername("微笑");
 				bean.setContent(et_comment.getText().toString().trim());
-				bean.setPhotoUrl("https://baike.baidu.com/pic/%E9%AB%98%E5%9C%B0%E5%B9%B3/8249423/0/50da81cb39dbb6fd1a635b6f0124ab18972b37ba?fr=lemma&ct=single#aid=0&pic=50da81cb39dbb6fd1a635b6f0124ab18972b37ba");
-				bean.setTime(getStringDate());
+				bean.setPicture("https://baike.baidu.com/pic/%E9%AB%98%E5%9C%B0%E5%B9%B3/8249423/0/50da81cb39dbb6fd1a635b6f0124ab18972b37ba?fr=lemma&ct=single#aid=0&pic=50da81cb39dbb6fd1a635b6f0124ab18972b37ba");
+				bean.setCreateTime(getStringDate());
 				MomentsActivity.mlist.add(bean);
 				MomentsActivity.mHandler.sendEmptyMessage(0);
 				finish();

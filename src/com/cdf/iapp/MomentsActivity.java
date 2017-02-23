@@ -1,14 +1,24 @@
 package com.cdf.iapp;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.cdf.iapp.adapter.MomentsGroupAdapter;
 import com.cdf.iapp.bean.CommentBean;
-import com.cdf.iapp.bean.FriendsGroupBean;
+import com.cdf.iapp.bean.DynamicBean;
 import com.cdf.iapp.bean.PraiseBean;
+import com.cdf.iapp.sys.Global;
+import com.cdf.iapp.util.HttpUtil;
+import com.cdf.iapp.util.SharedHelper;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -38,14 +48,10 @@ import android.widget.ListView;
 public class MomentsActivity extends Activity implements OnClickListener {
 	private ImageView iv_back,iv_comment;
 	private ListView lv_result;
-	
-	private  SharedPreferences prefs;
-	private  String userName="zxd";
-	public static String mCosde="0";//第几次进入为0表示第一次进入
 	public static Handler mHandler;
-	
-	public static List<FriendsGroupBean> mlist=new ArrayList<FriendsGroupBean>();
-	
+	public static List<DynamicBean> mlist=new ArrayList<DynamicBean>();
+	public static int mPage = 1;
+	public static int mLimit = 10;
 	//图像相关
 		public static Bitmap bitmap;
 		public static String imageName;//图片名字
@@ -59,16 +65,9 @@ public class MomentsActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_moments);
-		prefs =  PreferenceManager.getDefaultSharedPreferences(this);
-		mCosde=prefs.getString("code", "0");
+
 		initView();
-		if(mCosde.equals("0")){
-			mCosde="1";
-			prefs.edit().putString("code", "1").commit();
-			initData();
-		}else{
-			
-		}
+		initData();
 		setData();
 		mHandler=new Handler(){
 			@Override
@@ -104,47 +103,78 @@ public class MomentsActivity extends Activity implements OnClickListener {
 			}
 		});
 	}
+//	private void initData() {
+//		FriendsGroupBean bean=new FriendsGroupBean();
+//		bean.setName("gogoing");
+//		bean.setContent("55kai就是一撒比");
+//		bean.setPhotoUrl("https://baike.baidu.com/pic/%E9%AB%98%E5%9C%B0%E5%B9%B3/8249423/0/50da81cb39dbb6fd1a635b6f0124ab18972b37ba?fr=lemma&ct=single#aid=0&pic=50da81cb39dbb6fd1a635b6f0124ab18972b37ba");
+//		bean.setTime("2017-01-19 11:11:11");
+//		ArrayList<CommentBean> mCommentlist=new ArrayList<CommentBean>();
+//		CommentBean mCommentBean=new CommentBean();
+//		mCommentBean.setName("若风");
+//		mCommentBean.setToname("gogoing");
+//		mCommentBean.setContent("说的对，他就是一撒比");
+//		mCommentlist.add(mCommentBean);
+//		CommentBean mCommentBean1=new CommentBean();
+//		mCommentBean1.setName("Uzi");
+//		mCommentBean1.setToname("");
+//		mCommentBean1.setContent("小伙子还阔以啊");
+//		mCommentlist.add(mCommentBean1);
+//		CommentBean mCommentBean2=new CommentBean();
+//		mCommentBean2.setName("gogoing");
+//		mCommentBean2.setToname("Uzi");
+//		mCommentBean2.setContent("诶，丢皇族的人啊");
+//		mCommentlist.add(mCommentBean2);
+//		CommentBean mCommentBean3=new CommentBean();
+//		mCommentBean3.setName("微笑");
+//		mCommentBean3.setToname("若风");
+//		mCommentBean3.setContent("我就笑笑，不说话");
+//		mCommentlist.add(mCommentBean3);
+//		CommentBean mCommentBean4=new CommentBean();
+//		mCommentBean4.setName("clearlove");
+//		mCommentBean4.setToname("");
+//		mCommentBean4.setContent("小伙子，好好练练吧");
+//		mCommentlist.add(mCommentBean4);
+//		bean.setmCommentList(mCommentlist);
+//		ArrayList<PraiseBean> mPraises=new ArrayList<PraiseBean>();
+//		PraiseBean prabean=new PraiseBean();
+//		prabean.setName("faker");
+//		prabean.setTime("2017-01-19 11:11:11");
+//		prabean.setUsername(userName);
+//		mPraises.add(prabean);
+//		bean.setPraises(mPraises);
+//		mlist.add(bean);
+//	}
+	
 	private void initData() {
-		FriendsGroupBean bean=new FriendsGroupBean();
-		bean.setName("gogoing");
-		bean.setContent("55kai就是一撒比");
-		bean.setPhotoUrl("https://baike.baidu.com/pic/%E9%AB%98%E5%9C%B0%E5%B9%B3/8249423/0/50da81cb39dbb6fd1a635b6f0124ab18972b37ba?fr=lemma&ct=single#aid=0&pic=50da81cb39dbb6fd1a635b6f0124ab18972b37ba");
-		bean.setTime("2017-01-19 11:11:11");
-		ArrayList<CommentBean> mCommentlist=new ArrayList<CommentBean>();
-		CommentBean mCommentBean=new CommentBean();
-		mCommentBean.setName("若风");
-		mCommentBean.setToname("gogoing");
-		mCommentBean.setContent("说的对，他就是一撒比");
-		mCommentlist.add(mCommentBean);
-		CommentBean mCommentBean1=new CommentBean();
-		mCommentBean1.setName("Uzi");
-		mCommentBean1.setToname("");
-		mCommentBean1.setContent("小伙子还阔以啊");
-		mCommentlist.add(mCommentBean1);
-		CommentBean mCommentBean2=new CommentBean();
-		mCommentBean2.setName("gogoing");
-		mCommentBean2.setToname("Uzi");
-		mCommentBean2.setContent("诶，丢皇族的人啊");
-		mCommentlist.add(mCommentBean2);
-		CommentBean mCommentBean3=new CommentBean();
-		mCommentBean3.setName("微笑");
-		mCommentBean3.setToname("若风");
-		mCommentBean3.setContent("我就笑笑，不说话");
-		mCommentlist.add(mCommentBean3);
-		CommentBean mCommentBean4=new CommentBean();
-		mCommentBean4.setName("clearlove");
-		mCommentBean4.setToname("");
-		mCommentBean4.setContent("小伙子，好好练练吧");
-		mCommentlist.add(mCommentBean4);
-		bean.setmCommentList(mCommentlist);
-		ArrayList<PraiseBean> mPraises=new ArrayList<PraiseBean>();
-		PraiseBean prabean=new PraiseBean();
-		prabean.setName("faker");
-		prabean.setTime("2017-01-19 11:11:11");
-		prabean.setUsername(userName);
-		mPraises.add(prabean);
-		bean.setPraises(mPraises);
-		mlist.add(bean);
+//		FriendsGroupBean bean=new FriendsGroupBean();
+//		mlist.add(bean);
+		new Thread(){
+			public void run() {
+				SharedHelper shp = new SharedHelper(getApplicationContext());
+				String _token = shp.getString("token"); 
+				try {
+					JSONObject j = HttpUtil.doGet(Global.URL_GETDYNAMICS + "?token=" + _token + "&page=" + mPage + "&limit=" + mLimit);
+					if(j.getInt("code") == 0){
+						JSONArray jarr = j.getJSONArray("data");
+						for (int i = 0; i < jarr.length(); i++) {
+							JSONObject o = jarr.getJSONObject(i);
+							DynamicBean db = new DynamicBean();
+							db.setContent(o.getString("content"));
+							db.setCreateTime(o.getString("createTIme"));
+							db.setUsername(o.getString("username"));
+							db.setAuid(o.getString("auid"));
+							if(o.has("picture")){
+								db.setPicture(o.getString("picture"));
+							}
+							mlist.add(db);
+						}
+					}
+				} catch (IOException | JSONException e) {
+					e.printStackTrace();
+				}
+			};
+		}.start();
 	}
 	private void setData() {
 		MomentsGroupAdapter mAdapter=new MomentsGroupAdapter(MomentsActivity.this, mlist);
