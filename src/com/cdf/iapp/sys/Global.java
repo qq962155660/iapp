@@ -17,5 +17,5 @@ public class Global {
 	/**获取好友动态列表**/
 	public static String URL_GETDYNAMICS = URL_MAIN + "/dynamic/getDynamics";
 	/**发表动态**/
-	public static String URL_CREATEDYNAMIC = URL_MAIN + "/dynamic/crateDynamic";
+	public static String URL_CREATEDYNAMIC = URL_MAIN + "/dynamic/createDynamic";
 }

@@ -89,7 +89,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 			@Override
 			public void run() {
 				try {
-					JSONObject json = HttpUtil.doGet(Global.URL_LOGIN + "?account=" + account + "&password=" + password);;
+					JSONObject json = HttpUtil.doGet(getApplicationContext(),Global.URL_LOGIN + "?account=" + account + "&password=" + password);;
 					if(json.getInt("code") == 0){
 						String token = json.getString("data");
 						SharedHelper shp = new SharedHelper(getApplicationContext());
