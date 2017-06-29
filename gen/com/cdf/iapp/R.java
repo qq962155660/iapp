@@ -8,58 +8,132 @@
 package com.cdf.iapp;
 
 public final class R {
+    public static final class array {
+        public static final int data=0x7f040000;
+        public static final int head=0x7f040001;
+    }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sidebar_nor_background=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sidebar_press_background=0x7f010001;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sidebar_text_color_nor=0x7f010003;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sidebar_text_color_press=0x7f010004;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int sidebar_text_size=0x7f010002;
     }
     public static final class color {
         /**  辅助文字 
          */
-        public static final int Orange=0x7f04000f;
+        public static final int Orange=0x7f05001a;
         /**  background color 
          */
-        public static final int background_blue=0x7f040002;
-        public static final int background_gray=0x7f040003;
-        public static final int background_gray_pale=0x7f040004;
-        public static final int background_main=0x7f040005;
+        public static final int background_blue=0x7f05000c;
+        public static final int background_gray=0x7f05000d;
+        public static final int background_gray_pale=0x7f05000e;
+        public static final int background_main=0x7f050010;
+        public static final int banhuifgx=0x7f05000f;
+        public static final int bg_black=0x7f050000;
+        public static final int bg_gray=0x7f050003;
+        public static final int bg_topbar=0x7f050002;
+        public static final int bg_white=0x7f050001;
         /**  半透明 
          */
-        public static final int black=0x7f040008;
+        public static final int black=0x7f050013;
         /**  红色 
          */
-        public static final int blue=0x7f04000d;
+        public static final int blue=0x7f050018;
         /**  深蓝 
          */
-        public static final int blue_dleep=0x7f040012;
+        public static final int blue_dleep=0x7f05001d;
+        public static final int colorAccent=0x7f050022;
+        /**  灰色背景 
+         */
+        public static final int colorPrimary=0x7f050020;
+        public static final int colorPrimaryDark=0x7f050021;
+        public static final int common_botton_bar_blue=0x7f050023;
+        public static final int common_top_bar_blue=0x7f050024;
         /**  橙色 
          */
-        public static final int dark_grey=0x7f040010;
+        public static final int dark_grey=0x7f05001b;
         /**  用于页面背景 
          */
-        public static final int darkblue=0x7f04000a;
+        public static final int darkblue=0x7f050015;
+        public static final int div_white=0x7f050008;
         /**  黑色 
          */
-        public static final int igray=0x7f040009;
+        public static final int igray=0x7f050014;
         /**  红色 
          */
-        public static final int igray_et=0x7f04000e;
+        public static final int igray_et=0x7f050019;
+        public static final int navpage=0x7f050009;
+        public static final int normal=0x7f05001e;
+        public static final int press=0x7f05001f;
         /**  白色 
          */
-        public static final int red=0x7f04000c;
+        public static final int red=0x7f050017;
         /**  透明 
          */
-        public static final int semi_transparent=0x7f040007;
+        public static final int semi_transparent=0x7f050012;
         /**  Text color 
          */
-        public static final int text_black=0x7f040000;
-        public static final int text_white=0x7f040001;
+        public static final int text_black=0x7f05000a;
+        /**  <color name="transparent">#00FFFFFF</color> 
+         */
+        public static final int text_gray=0x7f050004;
+        public static final int text_green=0x7f050006;
+        public static final int text_topbar=0x7f050007;
+        public static final int text_white=0x7f05000b;
+        /**   <color name="text_white">#FFFFFF</color> 
+         */
+        public static final int text_yellow=0x7f050005;
         /**  背景浅灰 
          */
-        public static final int transparent=0x7f040006;
+        public static final int transparent=0x7f050011;
         /**  actionbar背景 ,即是所有标题栏背景 主题色 
          */
-        public static final int white=0x7f04000b;
+        public static final int white=0x7f050016;
         /**  深灰 
          */
-        public static final int wxnavpage=0x7f040011;
+        public static final int wxnavpage=0x7f05001c;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -68,56 +142,196 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f060000;
+        public static final int activity_vertical_margin=0x7f060001;
+        public static final int height_top_bar=0x7f060002;
     }
     public static final class drawable {
-        public static final int btn_settings=0x7f020000;
-        public static final int clr_normal=0x7f02000e;
-        public static final int clr_pressed=0x7f02000f;
-        public static final int guide1=0x7f020001;
-        public static final int guide2=0x7f020002;
-        public static final int guide3=0x7f020003;
-        public static final int guide_one=0x7f020004;
-        public static final int guide_three=0x7f020005;
-        public static final int guide_two=0x7f020006;
-        public static final int ic_launcher=0x7f020007;
-        public static final int login_btn_selector=0x7f020008;
-        public static final int login_button=0x7f020009;
-        public static final int pwd_icon=0x7f02000a;
-        public static final int text_bg_white=0x7f02000b;
-        public static final int usename_icon=0x7f02000c;
-        public static final int welcomes=0x7f02000d;
+        public static final int ac0=0x7f020000;
+        public static final int ac1=0x7f020001;
+        public static final int add=0x7f020002;
+        public static final int add_photo=0x7f020003;
+        public static final int blog_normal=0x7f020004;
+        public static final int blog_pressed=0x7f020005;
+        public static final int btn_settings=0x7f020006;
+        public static final int clr_normal=0x7f02003a;
+        public static final int clr_pressed=0x7f02003b;
+        public static final int comment=0x7f020007;
+        public static final int corners_bg_gray=0x7f020008;
+        public static final int corners_bg_green=0x7f020009;
+        public static final int corners_bg_white=0x7f02000a;
+        public static final int feed_comment=0x7f02000b;
+        public static final int feed_comment_down=0x7f02000c;
+        public static final int feed_more=0x7f02000d;
+        public static final int feed_praise=0x7f02000e;
+        public static final int feed_praise_down=0x7f02000f;
+        public static final int findon_normal=0x7f020010;
+        public static final int findon_pressed=0x7f020011;
+        public static final int friend_normal=0x7f020012;
+        public static final int friend_pressed=0x7f020013;
+        public static final int guide1=0x7f020014;
+        public static final int guide2=0x7f020015;
+        public static final int guide3=0x7f020016;
+        public static final int guide_one=0x7f020017;
+        public static final int guide_three=0x7f020018;
+        public static final int guide_two=0x7f020019;
+        public static final int ic_launcher=0x7f02001a;
+        public static final int item_click=0x7f02001b;
+        public static final int item_tip_bg=0x7f02001c;
+        public static final int login_btn_selector=0x7f02001d;
+        public static final int login_button=0x7f02001e;
+        public static final int m_top_img=0x7f02001f;
+        public static final int moments=0x7f020020;
+        public static final int more=0x7f020021;
+        public static final int my_edittext=0x7f020022;
+        public static final int noarrow=0x7f020023;
+        public static final int person_normal=0x7f020024;
+        public static final int person_pressed=0x7f020025;
+        public static final int progress_bg=0x7f020026;
+        public static final int pwd_icon=0x7f020027;
+        public static final int scan=0x7f020028;
+        public static final int scrollbar_handle_vertical=0x7f020029;
+        public static final int selector_single=0x7f02002a;
+        public static final int tab_menu_bg=0x7f02002b;
+        public static final int tab_menu_blog=0x7f02002c;
+        public static final int tab_menu_findon=0x7f02002d;
+        public static final int tab_menu_friend=0x7f02002e;
+        public static final int tab_menu_myself=0x7f02002f;
+        public static final int tab_menu_text=0x7f020030;
+        public static final int tab_pl=0x7f020031;
+        public static final int tab_zan=0x7f020032;
+        public static final int text_bg_white=0x7f020033;
+        public static final int top_bar_back=0x7f020034;
+        public static final int touxiang=0x7f020035;
+        public static final int usename_icon=0x7f020036;
+        public static final int vedio=0x7f020037;
+        public static final int welcomes=0x7f020038;
+        public static final int xin=0x7f020039;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000a;
-        public static final int guide_viewpager=0x7f090000;
-        public static final int id_btn_login=0x7f090005;
-        public static final int id_cb_forgetpwd=0x7f090007;
-        public static final int id_et_account=0x7f090003;
-        public static final int id_et_pwd=0x7f090004;
-        public static final int id_tv_register=0x7f090008;
-        public static final int iv_setting=0x7f090001;
-        public static final int relative=0x7f090006;
-        public static final int start_btn11=0x7f090009;
-        public static final int tv_title=0x7f090002;
+        public static final int Item_MainText=0x7f0a0033;
+        public static final int Item_ctn=0x7f0a0034;
+        public static final int Item_title=0x7f0a0032;
+        public static final int action_settings=0x7f0a0056;
+        public static final int div_tab_bar=0x7f0a0015;
+        public static final int dynamic_head_self_name=0x7f0a001a;
+        public static final int et_comment=0x7f0a0004;
+        public static final int fg1_listview=0x7f0a0021;
+        public static final int fg2_alipy=0x7f0a002d;
+        public static final int fg2_ry1=0x7f0a0025;
+        public static final int fg2_ry2=0x7f0a0029;
+        public static final int fg2_ry3=0x7f0a002b;
+        public static final int fg3_listview=0x7f0a0022;
+        public static final int fl_content=0x7f0a0016;
+        public static final int guide_viewpager=0x7f0a0006;
+        public static final int id_btn_login=0x7f0a000b;
+        public static final int id_cb_forgetpwd=0x7f0a000d;
+        public static final int id_et_account=0x7f0a0009;
+        public static final int id_et_pwd=0x7f0a000a;
+        public static final int id_tv_register=0x7f0a000e;
+        public static final int imageView1=0x7f0a0027;
+        public static final int imageView2=0x7f0a002a;
+        public static final int imageView3=0x7f0a002c;
+        public static final int imageView4=0x7f0a002e;
+        public static final int item=0x7f0a0046;
+        public static final int item_author=0x7f0a0035;
+        public static final int item_blog_detail=0x7f0a0030;
+        public static final int item_blog_group=0x7f0a003b;
+        public static final int item_comment=0x7f0a0042;
+        public static final int item_comment_text=0x7f0a0037;
+        public static final int item_fav=0x7f0a0038;
+        public static final int item_group_Introduction_text=0x7f0a003d;
+        public static final int item_group_author_text=0x7f0a0040;
+        public static final int item_group_comment_text=0x7f0a0044;
+        public static final int item_group_read_text=0x7f0a0043;
+        public static final int item_group_time_text=0x7f0a003f;
+        public static final int item_group_title_text=0x7f0a003c;
+        public static final int item_lay=0x7f0a0031;
+        public static final int item_more=0x7f0a003a;
+        public static final int item_read=0x7f0a0041;
+        public static final int item_read_text=0x7f0a0039;
+        public static final int item_share=0x7f0a0036;
+        public static final int item_time=0x7f0a003e;
+        public static final int iv_back=0x7f0a0001;
+        public static final int iv_comment=0x7f0a0017;
+        public static final int iv_mtopimg=0x7f0a0018;
+        public static final int iv_photo=0x7f0a0005;
+        public static final int iv_pl=0x7f0a001f;
+        public static final int iv_setting=0x7f0a0007;
+        public static final int iv_xin=0x7f0a004f;
+        public static final int iv_zan=0x7f0a001e;
+        public static final int ll_fb=0x7f0a001c;
+        public static final int ll_zan_and_pl=0x7f0a004d;
+        public static final int ll_zan_or_pl=0x7f0a004b;
+        public static final int lv_comment=0x7f0a0052;
+        public static final int lv_result=0x7f0a001b;
+        public static final int ly_top_bar=0x7f0a000f;
+        public static final int name=0x7f0a0047;
+        public static final int progress_bar=0x7f0a0053;
+        public static final int rb_blog=0x7f0a0011;
+        public static final int rb_findon=0x7f0a0012;
+        public static final int rb_friend=0x7f0a0013;
+        public static final int rb_myself=0x7f0a0014;
+        public static final int relative=0x7f0a000c;
+        public static final int relativeLayout1=0x7f0a0026;
+        public static final int rg_tab_bar=0x7f0a0010;
+        public static final int rl_dianzan=0x7f0a004e;
+        public static final int rl_zan=0x7f0a004c;
+        public static final int sidebarview=0x7f0a0023;
+        public static final int siv_img=0x7f0a0019;
+        public static final int start_btn11=0x7f0a0055;
+        public static final int textView1=0x7f0a0020;
+        public static final int text_alipay=0x7f0a002f;
+        public static final int text_pyq=0x7f0a0028;
+        public static final int tip=0x7f0a0024;
+        public static final int title=0x7f0a0000;
+        public static final int tv_add=0x7f0a0003;
+        public static final int tv_comment=0x7f0a001d;
+        public static final int tv_content=0x7f0a0049;
+        public static final int tv_name=0x7f0a0048;
+        public static final int tv_time=0x7f0a004a;
+        public static final int tv_title=0x7f0a0008;
+        public static final int tv_zan=0x7f0a0050;
+        public static final int txt_comment=0x7f0a0045;
+        public static final int view=0x7f0a0051;
+        public static final int view_temp=0x7f0a0002;
+        public static final int webview_content=0x7f0a0054;
     }
     public static final class layout {
-        public static final int activity_guide=0x7f030000;
-        public static final int activity_index=0x7f030001;
-        public static final int activity_login=0x7f030002;
-        public static final int activity_main=0x7f030003;
+        public static final int activity_comment=0x7f030000;
+        public static final int activity_comment2=0x7f030001;
+        public static final int activity_guide=0x7f030002;
+        public static final int activity_index=0x7f030003;
+        public static final int activity_login=0x7f030004;
+        public static final int activity_main=0x7f030005;
+        public static final int activity_moments=0x7f030006;
+        public static final int dialog_my_shure=0x7f030007;
+        public static final int frag_four=0x7f030008;
+        public static final int frag_one=0x7f030009;
+        public static final int frag_three=0x7f03000a;
+        public static final int frag_two=0x7f03000b;
+        public static final int item_blog_detail=0x7f03000c;
+        public static final int item_blog_group=0x7f03000d;
+        public static final int item_comment=0x7f03000e;
+        public static final int item_friend_group=0x7f03000f;
+        public static final int item_lv_h=0x7f030010;
+        public static final int item_moment_group=0x7f030011;
+        public static final int webview_content=0x7f030012;
     }
     public static final class menu {
-        public static final int login=0x7f080000;
-        public static final int main=0x7f080001;
+        public static final int login=0x7f090000;
+        public static final int main=0x7f090001;
     }
     public static final class string {
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060000;
-        public static final int hello_world=0x7f060002;
-        public static final int hint_password=0x7f060004;
-        public static final int hint_username=0x7f060003;
+        public static final int action_settings=0x7f070001;
+        public static final int app_name=0x7f070000;
+        public static final int hello_world=0x7f070002;
+        public static final int hint_password=0x7f070004;
+        public static final int hint_username=0x7f070003;
+        public static final int tab_menu_blog=0x7f070005;
+        public static final int tab_menu_findon=0x7f070006;
+        public static final int tab_menu_friend=0x7f070007;
+        public static final int tab_menu_myself=0x7f070008;
     }
     public static final class style {
         /** 
@@ -141,10 +355,112 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f080001;
+        public static final int myProgressBarStyleLarge=0x7f080003;
+        public static final int tab_menu_item=0x7f080002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a SideBarView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SideBarView_sidebar_nor_background com.cdf.iapp:sidebar_nor_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #SideBarView_sidebar_press_background com.cdf.iapp:sidebar_press_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #SideBarView_sidebar_text_color_nor com.cdf.iapp:sidebar_text_color_nor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SideBarView_sidebar_text_color_press com.cdf.iapp:sidebar_text_color_press}</code></td><td></td></tr>
+           <tr><td><code>{@link #SideBarView_sidebar_text_size com.cdf.iapp:sidebar_text_size}</code></td><td></td></tr>
+           </table>
+           @see #SideBarView_sidebar_nor_background
+           @see #SideBarView_sidebar_press_background
+           @see #SideBarView_sidebar_text_color_nor
+           @see #SideBarView_sidebar_text_color_press
+           @see #SideBarView_sidebar_text_size
+         */
+        public static final int[] SideBarView = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.cdf.iapp.R.attr#sidebar_nor_background}
+          attribute's value can be found in the {@link #SideBarView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.cdf.iapp:sidebar_nor_background
+        */
+        public static final int SideBarView_sidebar_nor_background = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.cdf.iapp.R.attr#sidebar_press_background}
+          attribute's value can be found in the {@link #SideBarView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.cdf.iapp:sidebar_press_background
+        */
+        public static final int SideBarView_sidebar_press_background = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.cdf.iapp.R.attr#sidebar_text_color_nor}
+          attribute's value can be found in the {@link #SideBarView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.cdf.iapp:sidebar_text_color_nor
+        */
+        public static final int SideBarView_sidebar_text_color_nor = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.cdf.iapp.R.attr#sidebar_text_color_press}
+          attribute's value can be found in the {@link #SideBarView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.cdf.iapp:sidebar_text_color_press
+        */
+        public static final int SideBarView_sidebar_text_color_press = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.cdf.iapp.R.attr#sidebar_text_size}
+          attribute's value can be found in the {@link #SideBarView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.cdf.iapp:sidebar_text_size
+        */
+        public static final int SideBarView_sidebar_text_size = 2;
+    };
 }

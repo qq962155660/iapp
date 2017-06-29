@@ -73,7 +73,8 @@ public class LoginActivity extends Activity implements OnClickListener{
 			if(v1.equals("") || v2.equals("")){
 				Toast.makeText(this, "账户密码不能为空", Toast.LENGTH_SHORT).show();
 			}else{
-				doLoin(v1,v2);
+				//doLoin(v1,v2);
+				mHandler.sendEmptyMessage(0);
 			}
 			break;
 

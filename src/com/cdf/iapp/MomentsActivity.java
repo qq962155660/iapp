@@ -106,33 +106,35 @@ public class MomentsActivity extends Activity implements OnClickListener {
 	}
 
 	private void initData() {
-		new Thread(){
-			public void run() {
-				try {
-					JSONObject j = HttpUtil.doGet(getApplicationContext(),Global.URL_GETDYNAMICS + "?page="  + mPage + "&limit=" + mLimit);
-					if(j.getInt("code") == 0){
-						JSONArray jarr = j.getJSONArray("data");
-						for (int i = 0; i < jarr.length(); i++) {
-							JSONObject o = jarr.getJSONObject(i);
-							DynamicBean db = new DynamicBean();
-							db.setContent(o.getString("content"));
-							db.setCreateTime(o.getString("createTime"));
-							db.setUsername(o.getString("username"));
-							db.setAuid(o.getString("auid"));
-							if(o.has("picture")){
-								//db.setPicture(o.getString("picture"));
-							}
-							mlist.add(db);
-						}
-						mHandler.sendEmptyMessage(0);
-					}
-				} catch (IOException | JSONException e) {
-					e.printStackTrace();
-				}
-			};
-		}.start();
+//		new Thread(){
+//			public void run() {
+//				try {
+//					JSONObject j = HttpUtil.doGet(getApplicationContext(),Global.URL_GETDYNAMICS + "?page="  + mPage + "&limit=" + mLimit);
+//					if(j.getInt("code") == 0){
+//						JSONArray jarr = j.getJSONArray("data");
+//						for (int i = 0; i < jarr.length(); i++) {
+//							JSONObject o = jarr.getJSONObject(i);
+//							DynamicBean db = new DynamicBean();
+//							db.setContent(o.getString("content"));
+//							db.setCreateTime(o.getString("createTime"));
+//							db.setUsername(o.getString("username"));
+//							db.setAuid(o.getString("auid"));
+//							if(o.has("picture")){
+//								//db.setPicture(o.getString("picture"));
+//							}
+//							mlist.add(db);
+//						}
+//						mHandler.sendEmptyMessage(0);
+//					}
+//				} catch (IOException | JSONException e) {
+//					e.printStackTrace();
+//				}
+//			};
+//		}.start();
 	}
 	private void setData() {
+		
+		
 		MomentsGroupAdapter mAdapter=new MomentsGroupAdapter(MomentsActivity.this, mlist);
 		lv_result.setAdapter(mAdapter);
 		setListViewHeightBasedOnChildren(lv_result, 0);

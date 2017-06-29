@@ -96,9 +96,9 @@ public class PhotoCommentActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.tv_add:
 			if (!et_comment.getText().toString().trim().isEmpty()) {
-				try {
-					postFile(et_comment.getText().toString().trim());
-					if (uploadState == 0) {
+//				try {
+//					postFile(et_comment.getText().toString().trim());
+//					if (uploadState == 0) {
 						DynamicBean bean = new DynamicBean();
 						bean.setUsername("微笑");
 						bean.setContent(et_comment.getText().toString().trim());
@@ -107,12 +107,13 @@ public class PhotoCommentActivity extends Activity implements OnClickListener {
 						MomentsActivity.mlist.add(0, bean);
 						MomentsActivity.mHandler.sendEmptyMessage(0);
 					}
-				} catch (FileNotFoundException e) {
-					e.printStackTrace();
-				}
-
-				finish();
-			}
+//				} catch (FileNotFoundException e) {
+//					e.printStackTrace();
+//				}
+//
+//				finish();
+//			}
+			finish();
 			break;
 		}
 	}
