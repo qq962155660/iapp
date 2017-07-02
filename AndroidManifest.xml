@@ -58,15 +58,33 @@
             android:label="@string/app_name" >
         </activity>
         
+        <activity
+            android:name="com.ali.alipayV2.PayDemoActivity"
+            android:icon="@drawable/msp_icon"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.ali.alipayV2.H5PayDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+         
              <!-- alipay sdk begin -->
         <!-- 若手机没有安装支付宝，则调用H5支付页面 -->
+      
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
-            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
-            android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden" >
-        </activity>
+            android:screenOrientation="behind" >
+		</activity>
+		<activity
+		            android:name="com.alipay.sdk.auth.AuthActivity"
+		            android:configChanges="orientation|keyboardHidden|navigation"
+		            android:exported="false"
+		            android:screenOrientation="behind" >
+		 </activity>
         <!-- alipay sdk end -->
     </application>
 

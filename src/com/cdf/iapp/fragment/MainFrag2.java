@@ -2,6 +2,7 @@ package com.cdf.iapp.fragment;
 
 import com.ali.alipay.AlipayAPI;
 import com.ali.alipay.PayResult;
+import com.ali.alipayV2.PayDemoActivity;
 import com.alipay.sdk.app.EnvUtils;
 import com.cdf.iapp.MomentsActivity;
 import com.cdf.iapp.R;
@@ -44,7 +45,10 @@ public class MainFrag2 extends Fragment{
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
 					System.out.println("支付开始。。。。。。。。。。");
-					new Thread(new AliPayThread()).start();
+					//new AliPayThread().start();
+					
+					Intent i = new Intent(getActivity(), PayDemoActivity.class);
+					startActivity(i);
 				}
 			});
 	        return v;  

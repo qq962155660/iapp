@@ -154,8 +154,8 @@ containing a value of this type.
         public static final int blog_normal=0x7f020004;
         public static final int blog_pressed=0x7f020005;
         public static final int btn_settings=0x7f020006;
-        public static final int clr_normal=0x7f02003a;
-        public static final int clr_pressed=0x7f02003b;
+        public static final int clr_normal=0x7f02003d;
+        public static final int clr_pressed=0x7f02003e;
         public static final int comment=0x7f020007;
         public static final int corners_bg_gray=0x7f020008;
         public static final int corners_bg_green=0x7f020009;
@@ -183,36 +183,40 @@ containing a value of this type.
         public static final int m_top_img=0x7f02001f;
         public static final int moments=0x7f020020;
         public static final int more=0x7f020021;
-        public static final int my_edittext=0x7f020022;
-        public static final int noarrow=0x7f020023;
-        public static final int person_normal=0x7f020024;
-        public static final int person_pressed=0x7f020025;
-        public static final int progress_bg=0x7f020026;
-        public static final int pwd_icon=0x7f020027;
-        public static final int scan=0x7f020028;
-        public static final int scrollbar_handle_vertical=0x7f020029;
-        public static final int selector_single=0x7f02002a;
-        public static final int tab_menu_bg=0x7f02002b;
-        public static final int tab_menu_blog=0x7f02002c;
-        public static final int tab_menu_findon=0x7f02002d;
-        public static final int tab_menu_friend=0x7f02002e;
-        public static final int tab_menu_myself=0x7f02002f;
-        public static final int tab_menu_text=0x7f020030;
-        public static final int tab_pl=0x7f020031;
-        public static final int tab_zan=0x7f020032;
-        public static final int text_bg_white=0x7f020033;
-        public static final int top_bar_back=0x7f020034;
-        public static final int touxiang=0x7f020035;
-        public static final int usename_icon=0x7f020036;
-        public static final int vedio=0x7f020037;
-        public static final int welcomes=0x7f020038;
-        public static final int xin=0x7f020039;
+        public static final int msp_demo_title=0x7f020022;
+        public static final int msp_demo_title_bg=0x7f020023;
+        public static final int msp_icon=0x7f020024;
+        public static final int my_edittext=0x7f020025;
+        public static final int noarrow=0x7f020026;
+        public static final int person_normal=0x7f020027;
+        public static final int person_pressed=0x7f020028;
+        public static final int progress_bg=0x7f020029;
+        public static final int pwd_icon=0x7f02002a;
+        public static final int scan=0x7f02002b;
+        public static final int scrollbar_handle_vertical=0x7f02002c;
+        public static final int selector_single=0x7f02002d;
+        public static final int tab_menu_bg=0x7f02002e;
+        public static final int tab_menu_blog=0x7f02002f;
+        public static final int tab_menu_findon=0x7f020030;
+        public static final int tab_menu_friend=0x7f020031;
+        public static final int tab_menu_myself=0x7f020032;
+        public static final int tab_menu_text=0x7f020033;
+        public static final int tab_pl=0x7f020034;
+        public static final int tab_zan=0x7f020035;
+        public static final int text_bg_white=0x7f020036;
+        public static final int top_bar_back=0x7f020037;
+        public static final int touxiang=0x7f020038;
+        public static final int usename_icon=0x7f020039;
+        public static final int vedio=0x7f02003a;
+        public static final int welcomes=0x7f02003b;
+        public static final int xin=0x7f02003c;
     }
     public static final class id {
         public static final int Item_MainText=0x7f0a0033;
         public static final int Item_ctn=0x7f0a0034;
         public static final int Item_title=0x7f0a0032;
-        public static final int action_settings=0x7f0a0056;
+        public static final int action_settings=0x7f0a005a;
+        public static final int authV2=0x7f0a0055;
         public static final int div_tab_bar=0x7f0a0015;
         public static final int dynamic_head_self_name=0x7f0a001a;
         public static final int et_comment=0x7f0a0004;
@@ -223,7 +227,9 @@ containing a value of this type.
         public static final int fg2_ry3=0x7f0a002b;
         public static final int fg3_listview=0x7f0a0022;
         public static final int fl_content=0x7f0a0016;
+        public static final int fragment=0x7f0a0053;
         public static final int guide_viewpager=0x7f0a0006;
+        public static final int h5pay=0x7f0a0056;
         public static final int id_btn_login=0x7f0a000b;
         public static final int id_cb_forgetpwd=0x7f0a000d;
         public static final int id_et_account=0x7f0a0009;
@@ -267,7 +273,8 @@ containing a value of this type.
         public static final int lv_result=0x7f0a001b;
         public static final int ly_top_bar=0x7f0a000f;
         public static final int name=0x7f0a0047;
-        public static final int progress_bar=0x7f0a0053;
+        public static final int payV2=0x7f0a0054;
+        public static final int progress_bar=0x7f0a0057;
         public static final int rb_blog=0x7f0a0011;
         public static final int rb_findon=0x7f0a0012;
         public static final int rb_friend=0x7f0a0013;
@@ -279,7 +286,7 @@ containing a value of this type.
         public static final int rl_zan=0x7f0a004c;
         public static final int sidebarview=0x7f0a0023;
         public static final int siv_img=0x7f0a0019;
-        public static final int start_btn11=0x7f0a0055;
+        public static final int start_btn11=0x7f0a0059;
         public static final int textView1=0x7f0a0020;
         public static final int text_alipay=0x7f0a002f;
         public static final int text_pyq=0x7f0a0028;
@@ -295,7 +302,7 @@ containing a value of this type.
         public static final int txt_comment=0x7f0a0045;
         public static final int view=0x7f0a0051;
         public static final int view_temp=0x7f0a0002;
-        public static final int webview_content=0x7f0a0054;
+        public static final int webview_content=0x7f0a0058;
     }
     public static final class layout {
         public static final int activity_comment=0x7f030000;
@@ -316,7 +323,9 @@ containing a value of this type.
         public static final int item_friend_group=0x7f03000f;
         public static final int item_lv_h=0x7f030010;
         public static final int item_moment_group=0x7f030011;
-        public static final int webview_content=0x7f030012;
+        public static final int pay_demo=0x7f030012;
+        public static final int pay_external=0x7f030013;
+        public static final int webview_content=0x7f030014;
     }
     public static final class menu {
         public static final int login=0x7f090000;
