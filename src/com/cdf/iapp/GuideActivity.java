@@ -2,13 +2,16 @@ package com.cdf.iapp;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import com.cdf.iapp.adapter.GuideAdapter;
 import com.cdf.iapp.util.SharedHelper;
 import com.cdf.iapp.util.StringUtils;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;

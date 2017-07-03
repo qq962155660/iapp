@@ -156,7 +156,7 @@
 	            android:layout_alignParentLeft="true"  
 	            android:layout_marginLeft="20dp"
 	            android:layout_centerVertical="true"  
-	            android:src="@drawable/moments" />  
+	            android:src="@drawable/money" />  
 	  
 	        <TextView  
 	            android:id="@+id/text_alipay"  
@@ -165,7 +165,7 @@
 	            android:layout_centerVertical="true"  
 	            android:layout_marginLeft="40dp"  
 	            android:layout_toRightOf="@+id/imageView4"  
-	            android:text="发起支付"  
+	            android:text="购买顶峰币"  
 	            android:textColor="#000" 
 	            android:textSize="18sp"/>  
 	  
