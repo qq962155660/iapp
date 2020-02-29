@@ -8,17 +8,27 @@ import com.ali.alipayV2.PayDemoActivity;
 import com.ali.alipayV2.PayResult;
 import com.alipay.sdk.app.EnvUtils;
 import com.alipay.sdk.app.PayTask;
+import com.cdf.iapp.MainActivity;
 import com.cdf.iapp.MomentsActivity;
+import com.cdf.iapp.MyApplication;
 import com.cdf.iapp.R;
 
 import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,7 +37,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class MainFrag2 extends Fragment{
+public class MainFrag2 extends Fragment  {
 
 	/** 支付宝支付业务：入参app_id */
 	public static final String APPID = "2016073100136937";
@@ -48,6 +58,8 @@ public class MainFrag2 extends Fragment{
 	
 	private static final int SDK_PAY_FLAG = 1;
 	private static final int SDK_AUTH_FLAG = 2;
+	
+	
 	
 	 @Override  
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,  
@@ -80,9 +92,40 @@ public class MainFrag2 extends Fragment{
 					payV2();
 				}
 			});
+	        
+	        //唤起通知
+	        RelativeLayout vtongzhi =  (RelativeLayout) v.findViewById(R.id.fg2_tongzhi);
+	        vtongzhi.setOnClickListener(
+	        		new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+						//获取NotificationManager实例
+						   NotificationManager notifyManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+						   //实例化NotificationCompat.Builde并设置相关属性
+						   NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity())
+						           //设置小图标
+						           .setSmallIcon(R.drawable.xin)
+						           //设置通知标题
+						           .setContentTitle("最简单的Notification")
+						           //设置通知内容
+						           .setContentText("只有小图标、标题、内容");
+						           //设置通知时间，默认为系统发出通知的时间，通常不用设置
+						           //.setWhen(System.currentTimeMillis());
+						   //通过builder.build()方法生成Notification对象,并发送通知,id=1
+						   notifyManager.notify(1, builder.build());
+					
+					
+				}
+			}
+	        		
+	        		);
+	     
+	        
 	        return v;  
 	    }  
-	 
+	 	
+
 	 
 	 @SuppressLint("HandlerLeak")
 		private Handler mHandler = new Handler() {
@@ -184,6 +227,7 @@ public class MainFrag2 extends Fragment{
 			Thread payThread = new Thread(payRunnable);
 			payThread.start();
 		}
-	 
+		
+
 	
 }

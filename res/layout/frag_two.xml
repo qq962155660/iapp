@@ -179,5 +179,45 @@
 	    </RelativeLayout>
 	   
     
+	      <RelativeLayout  
+	        android:id="@+id/fg2_tongzhi"  
+	        android:layout_width="match_parent"  
+	        android:layout_height="50dp"  
+	        android:layout_alignParentLeft="true"  
+	        android:layout_below="@+id/relativeLayout1"  
+	        android:layout_margin="10dp"
+	        android:padding="10dp"    
+	        android:background="@drawable/selector_single"  
+	        android:clickable="true" >  
+	  
+	        <ImageView  
+	            android:id="@+id/imageView5"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_alignParentLeft="true"  
+	            android:layout_marginLeft="20dp"
+	            android:layout_centerVertical="true"  
+	            android:src="@drawable/money" />  
+	  
+	        <TextView  
+	            android:id="@+id/text_alipay"  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_centerVertical="true"  
+	            android:layout_marginLeft="40dp"  
+	            android:layout_toRightOf="@+id/imageView5"  
+	            android:text="通知"  
+	            android:textColor="#000" 
+	            android:textSize="18sp"/>  
+	  
+	        <ImageView  
+	            android:layout_width="wrap_content"  
+	            android:layout_height="wrap_content"  
+	            android:layout_alignParentRight="true"  
+	            android:layout_centerVertical="true"  
+	            android:layout_marginRight="10dp"  
+	            android:src="@drawable/more" />  
+	    </RelativeLayout>
+	   
    </LinearLayout>
 </RelativeLayout>  
